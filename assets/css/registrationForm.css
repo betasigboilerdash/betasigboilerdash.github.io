@@ -1,0 +1,52 @@
+#registrationForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-template-areas:
+            "firstName      firstName       lastName        lastName"
+            "email          email           email           phone"
+            "gender         gender          shirtSize       shirtSize"
+            "emHead         emHead          emHead          emHead"
+            "emFirstName    emLastName      emLastName      emPhone";
+}
+
+#firstName {
+    grid-area: firstName;
+}
+
+#lastName {
+    grid-area: lastName;
+}
+
+#email {
+    grid-area: email;
+}
+
+#phone {
+    grid-area: phone;
+}
+
+#gender {
+    grid-area: gender;
+}
+
+#shirtSize {
+    grid-area: shirtSize;
+}
+
+#emHead {
+    grid-area: emHead;
+}
+
+#emergencyContactFirstName {
+    grid-area: emFirstName;
+}
+
+#emergencyContactLastName {
+    grid-area: emLastName;
+}
+
+#emergencyContactPhone {
+    grid-area: emPhone;
+}
