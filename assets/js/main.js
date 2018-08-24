@@ -4,6 +4,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Set up input masks
+$('#phoneInput').mask('(000) 000-0000');
+$('#emergencyContactPhoneInput').mask('(000) 000-0000');
+
 (function($) {
 
 	var	$window = $(window),
