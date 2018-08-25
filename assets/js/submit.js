@@ -119,7 +119,7 @@ function submit() {
             xhr.setRequestHeader('Authorization', 'Bearer ' + API_KEY);
         },
         success: function (data) {
-            window.location = "https://www.coolfaces.net/TooCOOLPurdueWL/ECItemCatalog/Item.aspx?Item=e8Y3WuFiGeU%3d";
+            window.location = "https://www.coolfaces.net/TooCOOLPurdueWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=7067";
         },
         error: function () {
             alert("Something went wrong. Try again later, or contact the developer, below.")
