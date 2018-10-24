@@ -1,5 +1,8 @@
-const TABLEID = "appwumhPcY8xOX2cF";
-const API_KEY = "keyJv9VUCQxEEuWa9";
+//TODO Fill these in when the site should go live again.
+const TABLE_ID = "";
+const TABLE_NAME = "";
+const API_KEY = "";
+const redirectUri = "";
 
 var inputs = document.querySelectorAll(".reg-input");
 
@@ -31,7 +34,7 @@ function validate(input) {
         }
         else {
             if (checkForPreviousSignUp(input.value)) {
-                alert("That email has already been used. Please use a different email.")
+                alert("That email has already been used. Please use a different email.");
                 $(input).addClass("invalid");
                 return false;
             } else {
@@ -67,7 +70,7 @@ function checkForPreviousSignUp(value) {
     var exists = false;
     $.ajax({
         type: "GET",
-        url: "https://api.airtable.com/v0/" + TABLEID + "/Imported%20table?maxRecords=1000&view=Grid%20view",
+        url: "https://api.airtable.com/v0/" + TABLE_ID + "/" + TABLE_NAME + "?view=Grid%20view",
         dataType: "text",
         beforeSend: function(xhr, settings) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + API_KEY);
@@ -112,14 +115,14 @@ function submit() {
     };
     $.ajax({
         type: "POST",
-        url: "https://api.airtable.com/v0/" + TABLEID + "/Imported%20table",
+        url: "https://api.airtable.com/v0/" + TABLE_ID + "/" + TABLE_NAME,
         contentType: "application/json",
         data: JSON.stringify(regData),
         beforeSend: function(xhr, settings) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + API_KEY);
         },
         success: function (data) {
-            window.location = "https://www.coolfaces.net/TooCOOLPurdueWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=7067";
+            window.location = redirectUri;
         },
         error: function () {
             alert("Something went wrong. Try again later, or contact the developer, below.")
