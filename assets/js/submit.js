@@ -1,8 +1,15 @@
+/*
+FOR UPDATE INSTRUCTIONS, SEE README.txt!
+ */
+
 //TODO Fill these in when the site should go live again.
+//Back-end variables
 const TABLE_ID = "";
 const TABLE_NAME = "";
 const API_KEY = "";
 const redirectUri = "";
+
+alert("Registration is currently closed. Please check with someone from Beta Sigma Psi about future races!");
 
 var inputs = document.querySelectorAll(".reg-input");
 
