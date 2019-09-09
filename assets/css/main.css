@@ -3776,3 +3776,9 @@ body.is-preload #header.alt .logo {
     }
 
 }
+
+#ugp-logo {
+    width: 252px;
+    height: 136px;
+    margin-top: 4em;
+}
